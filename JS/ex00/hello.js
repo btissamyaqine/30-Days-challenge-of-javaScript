@@ -1,3 +1,2 @@
-  <script>
-    console.log('Hello JS');
-  </script>
+console.log("Hello JS", "\n");
+   
