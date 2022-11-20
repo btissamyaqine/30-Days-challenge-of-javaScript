@@ -1,30 +1,31 @@
 // create a dynamicType object that works like below!
 const dynamicType = {
   put : function (nbr) {
-    let n= nbr
-    return n;
+    this.nbr = nbr
+    return nbr;
   },
-  // change : function(str) {
-  //   // how pass n value fron=m put to this function ? 
-  //   let n = this.put;
-  //   if (str == "String") {
-  //     toString(n);
-  //   } else if (str = "Object") {
-
-  //   } else if (str == "Array") {
-  //     Array.from(String(numToSeparate), Number);
-  //   }
-  //   return nbr2;
-  // },
+  change : function(str) {
+    // how pass n value fron=m put to this function ? 
+    let n = this.put;
+    
+    if (str == "String") {
+      var num = n.toString()
+      return num;
+    } 
+    else if (str == "Array") {
+      return Array.from(String(this.nbr));
+    }
+    else {
+      return n;
+    }
+    
+  },
   printType: function() {
-    console.log(this.put);
+    console.log(this.nbr);
   }, 
 }
 dynamicType.put(42);
 // dynamicType.change("Array");
+dynamicType.change("String");
 dynamicType.printType();
-// dynamicType.change("String");
-// dynamicType.printType();
-// console.log(dynamicType.printType());
-// console.log(typeof(dynamicType.printType()));
 
