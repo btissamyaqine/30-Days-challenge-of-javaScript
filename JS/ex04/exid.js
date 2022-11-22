@@ -10,7 +10,7 @@ const exid = {
     }
   },
   down(nbr){
-    let limit=42
+    let limit = 42
     nbr = this.up
     while(nbr > limit){
       nbr-= 1
