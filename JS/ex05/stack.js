@@ -27,3 +27,15 @@ const stackCreate = () => ({
   console.log(stack)
   },
 });
+try {
+    stackCreate.stackEmpty();
+    stackCreate.stackPush();
+    stackCreate.stackPeek();
+    stackCreate.stackPop();
+} catch (error) {
+    stackCreate.stackEmpty() == '';
+    stackCreate.stackPush() == '';
+    stackCreate.stackPeek() == '';
+    stackCreate.stackPop() == '';
+    logMyErrors(error)
+}
