@@ -13,6 +13,9 @@ display_ct();
 }
 display_ct()
 
+// const el1 = document.querySelector('[datetime]').innerHTML=display_time();
+const el1 = document.body.main.time.datetime.innerHTML=display_time();
+
 function getScreen() {
   return ("Screen: " + screen.width + "*" + screen.height);
 }
@@ -33,3 +36,21 @@ function getDocumentSize(){
   var documentHeight = positionInfo.height;
   return ("Document :" + documentWidth + "*" + documentHeight);
 }
+console.log(getScreen() );
+
+  function AddElementtoDOM() {
+    var ul = document.getElementById("list");
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode(getScreen()));
+    ul.appendChild(li);
+
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode(getWindowOuter()));
+    li.appendChild(document.createTextNode(getWindowInner()));
+    li.appendChild(document.createTextNode(getDocumentSize()));
+    ul.appendChild(li);
+  }
+
+
+
+  AddElementtoDOM();
