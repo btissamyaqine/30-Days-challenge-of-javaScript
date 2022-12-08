@@ -42,15 +42,9 @@ console.log(getScreen() );
     var ul = document.getElementById("list");
     var li = document.createElement("li");
     li.appendChild(document.createTextNode(getScreen()));
-    ul.appendChild(li);
-
-    var li = document.createElement("li");
     li.appendChild(document.createTextNode(getWindowOuter()));
-    li.appendChild(document.createTextNode(getWindowInner()));
-    li.appendChild(document.createTextNode(getDocumentSize()));
+    li.appendChild(document.createTextNode(getWindowOuter()));
+    li.appendChild(document.createTextNode(getWindowOuter()));
     ul.appendChild(li);
   }
-
-
-
   AddElementtoDOM();

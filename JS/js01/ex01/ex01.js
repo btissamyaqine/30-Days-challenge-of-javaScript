@@ -15,7 +15,7 @@ function startProgress(bars, index = 0) {
       clearInterval(id);
       startProgress(bars, index + 1);
     }
-  }, 50);
+  }, 5000);
 }
 
 startProgress(bars);
