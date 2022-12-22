@@ -11,15 +11,21 @@ function calculateDiscountPourcent(levelType){
   return discountPercent;
   };
  function getPrice() {
+    var d = new Date();          
+    var n = d.toLocaleString([], { hour12: true});
+
   var amount = Number(document.getElementById("amount").value);
   var discountLevel = Number(document.getElementById("discount-level").value) / 100;
-  var discountPerscent = calculateDiscountPourcent(discountLevel, amount);
+  // var discountPerscent = calculateDiscountPourcent(discountLevel, amount);
 
-
-  var totalDiscount = amount - (amount * discountPerscent);
+  var totalDiscount = amount - (amount * discountLevel);
   var productNameValue = document.getElementById("prodName").value;
   var amountValue = document.getElementById("amount").value;
+  
+  document.getElementById("demo").innerHTML = n;
   document.getElementById("discount").value = totalDiscount.toFixed(2);
   document.getElementById("productNameValue").value = productNameValue;
   document.getElementById("CostValue").value = amountValue;
+
+
 }
